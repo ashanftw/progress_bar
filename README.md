@@ -1,3 +1,5 @@
+<img src="https://github.com/ashanftw/progress_bar/blob/master/Screenshot_1574790383.png" alt="Sample Demo" style="max-width:100%;">
+
 new ProgressBar(
   padding: 5,
   barColor: Color(0XFF302F4D),
