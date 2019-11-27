@@ -1,4 +1,4 @@
-<img src="https://github.com/ashanftw/progress_bar/blob/master/Screenshot_1574790383.png" alt="Sample Demo" style="max-width:100%;">
+<img src="https://raw.githubusercontent.com/ashanftw/progress_bar/master/Screenshot_1574790383.png" alt="Sample Demo" style="max-width:100%;">
 <pre>
 new ProgressBar(
   padding: 5,
