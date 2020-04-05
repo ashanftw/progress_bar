@@ -1,6 +1,6 @@
 name: simple_progress_bar
 description: Curved Progressbar that customize color, font , dialog box and border.
-version: 0.0.3
+version: 0.0.4
 author: Ashan chathuranga <ashanchathuranga3@gmail.com>
 homepage: https://github.com/ashanftw/progress_bar.git
 

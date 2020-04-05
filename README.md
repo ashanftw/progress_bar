@@ -14,7 +14,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  simple_progress_bar: ^0.0.3
+  simple_progress_bar: ^0.0.4
 ```
 
 In your code, add import
@@ -68,6 +68,7 @@ Then add the widget to your screen
       numerator: 6,
       denominator: 8,
       title: 'Casual leave',
+      showRemainder: false,
       dialogTextStyle: new TextStyle(
           fontSize: 10,
           fontWeight: FontWeight.bold,

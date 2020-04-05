@@ -1,4 +1,5 @@
 library progress_bar;
+
 import 'package:flutter/material.dart';
 
 class ProgressBar extends StatelessWidget {
@@ -13,19 +14,21 @@ class ProgressBar extends StatelessWidget {
   final double padding;
   final Color backgroundColor;
   final Color boarderColor;
+  final bool showRemainder;
 
   ProgressBar(
       {@required this.title,
-        @required this.numerator,
-        @required this.denominator,
-        @required this.barWidth,
-        @required this.barHeight,
-        @required this.barColor,
-        @required this.titleStyle,
-        @required this.dialogTextStyle,
-        this.padding = 0.0,
-        this.backgroundColor = Colors.white,
-        this.boarderColor = Colors.grey});
+      @required this.numerator,
+      @required this.denominator,
+      @required this.barWidth,
+      @required this.barHeight,
+      @required this.barColor,
+      @required this.titleStyle,
+      @required this.dialogTextStyle,
+      this.padding = 0.0,
+      this.backgroundColor = Colors.white,
+      this.boarderColor = Colors.grey,
+      this.showRemainder = true});
 
   @override
   Widget build(BuildContext context) {
@@ -134,13 +137,18 @@ class ProgressBar extends StatelessWidget {
                               overflow: TextOverflow.clip,
                               style: this.dialogTextStyle,
                             ),
-                            new Text(
-                              'Remainder : ' +
-                                  (this.denominator - this.numerator)
-                                      .toStringAsFixed(1),
-                              overflow: TextOverflow.clip,
-                              style: this.dialogTextStyle,
-                            ),
+                            this.showRemainder == true
+                                ? new Text(
+                                    'Remainder : ' +
+                                        (this.denominator - this.numerator)
+                                            .toStringAsFixed(1),
+                                    overflow: TextOverflow.clip,
+                                    style: this.dialogTextStyle,
+                                  )
+                                : SizedBox(
+                                    width: 0,
+                                    height: 0,
+                                  ),
                           ],
                         ))
                   ],
